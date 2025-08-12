@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple-animation</title>
+    <style>
+        .simple-animation{
+            width: 200px;
+            height: 200px;
+            background-color:blue ;
+            position: relative;
+            animation-name: simpleanimation;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+            animation-direction:alternate-reverse;
+            animation-delay: 10s;
+        }
+        @keyframes simpleanimation{
+            0%{background-color: blue; left: 0px;top: 0px;}
+            25%{background-color: aqua; left: 300px; top: 0px;}
+            50%{background-color: blueviolet;left: 300px;top: 300px;}
+            75%{background-color: brown;left: 0px; top: 300px;}
+            100%{background-color: chartreuse; left: 0px; top: 0px;}
+        }
+        .wrapper-img{
+           width: 200px;
+           height: 200px;
+           border: 2px solid aqua; 
+           background-color: blueviolet;
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="simple-animation"></div>
+    <br>
+    <div class="wrapper-img">
+        <img src="image/raybilcliff.jpg" class="inner-img" alt="raybilcliff">
+    </div>
+</body>
+</html>
