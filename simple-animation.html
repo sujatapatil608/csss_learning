@@ -23,12 +23,14 @@
             75%{background-color: brown;left: 0px; top: 300px;}
             100%{background-color: chartreuse; left: 0px; top: 0px;}
         }
-        .wrapper-img{
-           width: 200px;
-           height: 200px;
-           border: 2px solid aqua; 
-           background-color: blueviolet;
-           
+        .image-animation{
+           width: 100px;
+           height: 100px; 
+           position: relative;
+           animation-name: myfirstanimation;
+           animation-duration: 2s;
+           animation-iteration-count: 2;
+           animation-direction: alternate-reverse;
         }
         
     </style>
@@ -36,8 +38,9 @@
 <body>
     <div class="simple-animation"></div>
     <br>
-    <div class="wrapper-img">
-        <img src="image/raybilcliff.jpg" class="inner-img" alt="raybilcliff">
+    <div class="image-animation">
+        <img src="image/raybilcliff.jpg" alt="raybilcliff">
+    </div>
     </div>
 </body>
 </html>
