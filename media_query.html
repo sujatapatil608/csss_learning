@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media_queries</title>
+    <style>
+        /*media query*/
+        /* mobile first we start the smallest viewport width*/
+        @media(min-width:320px)and(max-width:767px){
+            body{
+                font-size: 20px;
+                background-color: purple;
+            }
+            p{
+                display: none;
+            }
+            h1,h3{
+                color: white;
+            }
+        }
+
+        /* from 768px and up*/
+        @media(min-width:768px){
+            body{
+                background-color:orangered;
+            }
+            p{
+                display: none;
+            }
+            h3{
+                color: blueviolet;
+            }
+        } 
+        /* from 1024px */
+        @media(min-width:1024px) {
+            body{
+                background-color: blue;
+            }
+            p{
+                display: none;
+            }
+            h3{
+                color:blanchedalmond
+            }
+        } 
+        /* from 1224px and up*/
+          @media(min-width:1224px){
+            body{
+                background-color: blueviolet;
+            }
+            p{
+                display: none;
+            }
+            h3{
+                color: burlywood;
+            }
+          } 
+    </style>
+</head>
+<body>
+    <h1>CSS Medid Queries</h1>
+    <p>This background will change according to the viewport width change</p> <br> <br>
+
+    <h3>Smartphone -<span class="details">from 320px and up</span>
+    (min-width:320px)</h3>
+    <p>Blue</p>
+    <br>
+
+    <h3>Tablets.ipads(portrait)-<span class="details">from 768px and up</span>
+    (min-width:768px)</h3>
+    <p> Red</p>
+    <br>
+
+    <h3>Tablets,ipads(landscape)-<span class="details">from 1024px and up</span>
+    (min-width:1024px)</h3>
+    <p>yellow</p>
+    <br>
+    <h3>Desktop and Laptops-<span class="details">from 1224px and up</span>
+    (min-width:1224px)</h3>
+    <p>Orange</p>
+    <br>
+    <h3>Large -<span class="details">from 1350px and up</span>
+    (min-width:1350px)</h3>
+</body>
+</html>

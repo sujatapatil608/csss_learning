@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>z_index</title>
+    <style>
+        .z-continer{
+            position: relative;
+            margin: 50px;
+
+        }
+        div{
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            position: absolute;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            border: 3px solid white;
+
+        }
+        .blue{
+            background-color: blue;
+            left:60px ;
+            z-index: 2;
+        }
+        .green{
+            background-color: green;
+            right: 65px;
+            z-index: 1;
+        }
+        .red{
+            background-color: red;
+            top: 70px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="z-continer">
+        <div class="blue">Blue</div>
+        <div class="green">Green</div>
+        <div class="red">Red</div>
+    </div>
+</body>
+</html>
