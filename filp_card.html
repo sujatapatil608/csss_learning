@@ -6,58 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>filp-card</title>
     <style>
-        body{
-            height: 100px;
-            overflow: hidden;
-            background:linear-gradient(45deg,blue,pink) ;
-            color: aqua;
+        .hero {
+            height: 200px;
+            width: 200px;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: row-reverse;
+            flex: none;
+            flex-wrap: nowrap;
+            background-color: yellow;
             perspective: 100px;
         }
-        .continer{
-            width: 350px;
-            height: 350px;
+
+        .card-continer {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            perspective: 600;
+            cursor: pointer;
+            background-color: white;
         }
-        .card{
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
+
+        .card {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: all 1s ease-in-out;
+            background-color: blue;
         }
-        .card:hover{
+
+        .card:hover {
             transform: rotateY(180deg);
         }
-        .front{
-            width: 400px;
-            align-items: center;
-            height: 400px;
-            display: flex;
-            border-radius: 2px;
-            justify-content: center;
-            box-shadow: 0 0 5px 2px rgba(50,50,50, 0.25);
-            position: fixed;
-            background-image: url(image/bird.jpg);
+
+        .front-side {
+            backface-visibility: hidden;
+            border-radius: 6px;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            background-color: blueviolet;
         }
-        .back{
-            width: 400px;
-            height: 400px;
-            background-image: url(image/bird.jpg);
+
+        .back-side {
+            background-color:purple;
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            transform: rotateY(180deg);
         }
     </style>
 
 </head>
 
 <body>
-    <div class="continer">
-        <div class="card">
-            <div class="front">
-                <div class="back">
-
-                </div>
+    <div class="hero">
+        <div class="card-continer">
+            <div class="card">
+                <div class="front-side">This is Front Side</div>
+                <div class="back-side">This is Back Side </div>
             </div>
         </div>
     </div>

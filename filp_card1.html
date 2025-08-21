@@ -6,20 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .card-continer {
+        .card-contianer {
             display: flex;
             margin: 10px;
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 400px;
+            height: 400px;
             background-color:white;
             perspective: 1000px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            flex: none;
+            flex-grow: initial;
         }
 
         .card {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex: none;
+            flex-grow: initial;
             transform-style: preserve-3d;
             transition: all 0.5s ease;
             background-color: yellow;
@@ -29,29 +42,138 @@
         }
         .front{
             position: absolute;
-            width: 100px;
-            height: 100px;
+            height: 200px;
+            width: 200px;
+            background-color:orange;
             backface-visibility: hidden;
-            background-color: aqua;
-            color: #333;
+            color: blueviolet;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
         }
         .back{
             position: absolute;
-            width: 100px;
-            height: 100px;
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            color: white;
             backface-visibility: hidden;
-            background-color: #ffc728;
-            color: #333;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
             transform: rotateY(180deg);
         }
+
+        .front1{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background-color: aqua;
+            color: white;
+            backface-visibility: hidden;
+            position: absolute;
+
+        }
+        .back1{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background-color:orangered;
+            color: aquamarine;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+        }
+
+        .front-2{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background-color: blue;
+            color: white;
+            position: absolute;
+            backface-visibility: hidden;
+
+        }
+        .back-2{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background-color: purple;
+            color: aqua;
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+        }
+        .front-3{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            background-color: blueviolet;
+            color: white;
+            position: absolute;
+        }
+        .back-3{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            position: absolute;
+            background-color: blue;
+            color:white;
+            transform: rotateY(180deg);
+        }
+        
     </style>
 </head>
 
 <body>
-    <div class="card-continer">
+    <div class="card-contianer">
         <div class="card">
             <div class="front">Front of Card </div>
             <div class="back">Back of Card</div>
+        </div>
+    </div>
+
+    <div class="card-contianer">
+        <div class="card">
+            <div class="front1">Front of Card </div>
+            <div class="back1">Back of Card</div>
+        </div>
+    </div>
+
+    <div class="card-contianer">
+        <div class="card">
+            <div class="front-2">Front of Card </div>
+            <div class="back-2">Back of Card</div>
+        </div>
+    </div>
+
+    <div class="card-contianer">
+        <div class="card">
+            <div class="front-3">Front of Card </div>
+            <div class="back-3">Back of Card</div>
         </div>
     </div>
 </body>
